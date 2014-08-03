@@ -2,7 +2,7 @@
     {% for node in site.posts %}
         {% if page.url == node.url %}
         {% else %}
-            <div><a href="{{node.url}}">{{node.title}}</a></div>
+            <div><a href="{{node.url}}">{{node.title}}</a> ({{page.date}}</div>
         {% endif %}
     {% endfor %}
 </div>
