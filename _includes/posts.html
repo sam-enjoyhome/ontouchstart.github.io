@@ -1,12 +1,12 @@
 <dl>
     {% for node in site.posts %}
-        <dt>{{node.date|date_to_long_string}}</dt>
-        <dd>
-        {% if page.url == node.url %}
-            {{node.title}}
-        {% else %}
-            <a href="{{node.url}}">{{node.title}}</a>
-        {% endif %}
-        </dd>
+        <dt>
+            {% if page.url == node.url %}
+                {{node.title}}
+            {% else %}
+                <a href="{{node.url}}">{{node.title}}</a>
+            {% endif %}
+        </dt>
+        <dd>{{node.date|date: '%B %d, %Y'}}</dd>
     {% endfor %}
 </dl>
