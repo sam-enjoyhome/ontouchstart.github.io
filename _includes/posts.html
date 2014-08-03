@@ -1,8 +1,8 @@
-<ul>
+<div>
     {% for node in site.posts %}
         {% if page.url == node.url %}
         {% else %}
-            <li><a href="{{node.url}}">{{node.title}}</a></li>
+            <div><a href="{{node.url}}">{{node.title}}</a></div>
         {% endif %}
     {% endfor %}
-</ul>
+</div>
