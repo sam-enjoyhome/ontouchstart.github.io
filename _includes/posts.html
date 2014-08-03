@@ -1,8 +1,12 @@
-<div>
+<dl>
     {% for node in site.posts %}
+        <dt>{{node.date}}</dt>
+        <dd>
         {% if page.url == node.url %}
+            {{node.title}}
         {% else %}
-            <div><a href="{{node.url}}">{{node.title}}</a> {{node.date}}</div>
+            <a href="{{node.url}}">{{node.title}}</a>
         {% endif %}
+        </dd>
     {% endfor %}
-</div>
+</dl>
