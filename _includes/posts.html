@@ -1,6 +1,6 @@
 <dl>
     {% for node in site.posts %}
-        <dt>{{node.date}}</dt>
+        <dt>{{node.date|date_to_long_string}}</dt>
         <dd>
         {% if page.url == node.url %}
             {{node.title}}
