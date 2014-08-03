@@ -1,5 +1,6 @@
 {% for node in site.posts %}
-    {% if page.url !== node.url %}
+    {% if page.url == node.url %}
+    {% else %}
         <li><a href="{{node.url}}">{{node.title}}</a></li>
     {% endif %}
 {% endfor %}
