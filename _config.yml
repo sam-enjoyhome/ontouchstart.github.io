@@ -2,3 +2,4 @@ markdown: kramdown
 highlighter: pygments
 relative_permalinks: false
 permalink: /:year/:month/:day/:title/
+exclude: [README.md, Dockerfile, build.sh, nginx.sh]
