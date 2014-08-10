@@ -8,13 +8,9 @@ function repl(el) {
   output.style.width = "90%";
   output.style.margin = "auto";
 
-  console.log = function (message) {
-    output.innerText += message + '\n';
-  }
-
   input.onchange = function () { 
     try { 
-      eval(input.value); 
+      output.innerText += eval(input.value) + '\n';
     } catch (e) { 
       alert('Error: ' + e.message); 
     } 
