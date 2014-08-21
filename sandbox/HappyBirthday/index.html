@@ -23,6 +23,7 @@ h1 {
 <script>
 var portrait = document.createElement('div');
 portrait.innerHTML = "What is your name? ";
+portrait.style.padding = '40px';
 portrait.style.display = 'none';
 
 var landscape = document.createElement('div');
@@ -65,6 +66,7 @@ window.onorientationchange = function () {
 };
 
 window.onorientationchange();
+document.body.addEventListener("touchmove", function(e) { e.preventDefault();}, false);
 </script>
 </body>
 </html>
