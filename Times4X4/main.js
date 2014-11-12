@@ -91,23 +91,23 @@ function game(level, n) {
         else {
             if( mistakes > 0 ) {
                 if( mistakes > 1) {
-                   overlay.html("Oops, you made " + mistakes + " mistakes. Please try again. <p>");
+                   overlay.html("<img src=\"down.png\" width=\"150\"/><p>Oops, you made " + mistakes + " mistakes. Please try again. <p>");
                 }
                 else {
-                   overlay.html("Oops, you made one mistake. Please try again.<p>");
+                   overlay.html("<img src=\"down.png\" width=\"150\"/><p>Oops, you made one mistake. Please try again.<p>");
                 }
                overlay.style({"display": "block", "color": "red"})
                 .on("mousedown", function () {game(level, 5);});
             }
             else {
                 if(level < 19) {
-                    overlay.html("Great job! Move up to the next level.<p>");
+                    overlay.html("<img src=\"up.png\" width=\"150\"/><p>Great job! Move up to the next level.");
                     overlay.style({"display": "block", "color": "yellow"})
                     .on("mousedown", function () {game(level + 1, 5);});
                     
                 }
                 else {
-                    overlay.html("Great job! You finished the highest level of " + (level + 1) + ".<p>");
+                    overlay.html("<img src=\"up.png\" width=\"150\"/><p>Great job! You finished the highest level of " + (level + 1));
                     overlay.style({"display": "block", "color": "yellow"})
                     .on("mousedown", function () {game(0, 5);});
                 }
@@ -127,7 +127,7 @@ function game(level, n) {
           
             var cell = row.append("td")
                 .style({
-                       "position": "relative",
+                    "position": "relative",
                     "width": s,
                     "height": s,
                     "padding": 0,
@@ -135,7 +135,7 @@ function game(level, n) {
                 });
 
             var label = cell.append("button")
-                .html("<img src=\"thumb.png\" width=\"50\"/>")
+                .html("<img src=\"up.png\" width=\"50\"/>")
                 .style({
                        "position": "absolute",
                        "top": margin,
