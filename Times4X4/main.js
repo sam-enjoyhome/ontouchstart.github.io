@@ -97,19 +97,19 @@ function game(level, n) {
                    overlay.html("<img src=\"down.png\" width=\"150\"/><p>Oops, you made one mistake. Please try again.<p>");
                 }
                overlay.style({"display": "block", "color": "red"})
-                .on("mousedown", function () {game(level, 5);});
+                .on("click", function () {game(level, 5);});
             }
             else {
                 if(level < 19) {
                     overlay.html("<img src=\"up.png\" width=\"150\"/><p>Great job! Move up to the next level.");
                     overlay.style({"display": "block", "color": "yellow"})
-                    .on("mousedown", function () {game(level + 1, 5);});
+                    .on("click", function () {game(level + 1, 5);});
                     
                 }
                 else {
                     overlay.html("<img src=\"up.png\" width=\"150\"/><p>Great job! You finished the highest level of " + (level + 1));
                     overlay.style({"display": "block", "color": "yellow"})
-                    .on("mousedown", function () {game(0, 5);});
+                    .on("click", function () {game(0, 5);});
                 }
             }
         }
@@ -165,7 +165,7 @@ function game(level, n) {
                        "box-shadow": "2px 2px 2px #888888"
                 });
           
-            button.on("mousedown", function () {
+            button.on("click", function () {
                       var _this = this;
                       if(currentQuestion) {
                             if(_this.innerHTML == currentQuestion[2]) {
