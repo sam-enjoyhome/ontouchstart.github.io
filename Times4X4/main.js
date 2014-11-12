@@ -25,7 +25,7 @@ var problem = body.append("div")
 
 for(var i = 1; i < 33; i++) {
     levelSelect.append("option")
-    .html("<h1>Level " + i + "</h1>")
+    .html("Level " + i)
 }
 
 var overlay = body.append("div")
