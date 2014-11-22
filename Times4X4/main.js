@@ -182,6 +182,7 @@ window.onload = function () {
                         }
                 }
 		button.on("touchstart", check);
+		button.on("mousedown", check);
             }
         }
     }
