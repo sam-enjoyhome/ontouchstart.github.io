@@ -97,18 +97,18 @@ window.onload = function () {
                         overlay.html("<img src=\"sad.png\" width=\"150\"/><p>Oops, you made one mistake. Please try again.<p>");
                     }
                     overlay.style({"display": "block", "color": "red"});
-                    setTimeout(funtion () { game(level, 5); }, 3000);	
+                    setTimeout(function () { game(level, 5); }, 3000);	
                 }
                 else {
                     if(level < 19) {
                         overlay.html("<img src=\"cool.png\" width=\"150\"/><p>Great job! Move up to the next level.");
                         overlay.style({"display": "block", "color": "yellow"});
-                        setTimeout(funtion () { game(level + 1, 5); }, 3000);	
+                        setTimeout(function () { game(level + 1, 5); }, 3000);	
                     }
                     else {
                         overlay.html("<img src=\"cool.png\" width=\"150\"/><p>Great job! You finished the highest level of " + (level + 1));
                         overlay.style({"display": "block", "color": "yellow"});
-                        setTimeout(funtion () { game(level, 5); }, 3000);	
+                        setTimeout(function () { game(level, 5); }, 3000);	
                     }
                 }
             }
