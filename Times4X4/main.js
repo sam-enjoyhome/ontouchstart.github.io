@@ -181,13 +181,7 @@ window.onload = function () {
                             game(level, 5);
                         }
                 }
-		var touchable = 'ontouchstart' in document.documentElement;
-		if(touchable) {
-			button.on("touchstart", check);
-		}
-		else {
-			button.on("mousedown", check);
-		}
+		button.on("mousedown", check);
             }
         }
     }
