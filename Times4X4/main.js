@@ -165,6 +165,7 @@ window.onload = function () {
                             "box-shadow": "2px 2px 2px #888888"
                             });
                 function check() {
+			d3.event.stopPropagation();
                         var _this = this;
                         if(currentQuestion) {
                             if(_this.innerHTML == currentQuestion[2]) {
