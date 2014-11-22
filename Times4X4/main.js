@@ -165,7 +165,7 @@ window.onload = function () {
                             "box-shadow": "2px 2px 2px #888888"
                             });
 
-                button.on("mousedown", function () {
+                function check() {
                         var _this = this;
                         if(currentQuestion) {
                             if(_this.innerHTML == currentQuestion[2]) {
@@ -181,7 +181,9 @@ window.onload = function () {
                         else {
                             game(level, 5);
                         }
-                });
+                }
+		button.on("mousedown", check);
+		button.on("touchstart", check);
             }
         }
     }
