@@ -97,21 +97,18 @@ window.onload = function () {
                         overlay.html("Oops, you made one mistake. Please try again.<p><img src=\"sad.png\" width=\"150\"/>");
                     }
                     overlay.style({"display": "block", "color": "red"})
-                        .on("click", function () { game(level, 5); });
-                    //setTimeout(function () { game(level, 5); }, 3000);	
+                        .on("mousedown", function () { game(level, 5); });
                 }
                 else {
                     if(level < 19) {
                         overlay.html("Great job! Move up to the next level.<p><img src=\"cool.png\" width=\"150\"/>");
                         overlay.style({"display": "block", "color": "yellow"})
-                            .on("click", function () { game(level + 1, 5); });
-                        //setTimeout(function () { game(level + 1, 5); }, 3000);	
+                            .on("mousedown", function () { game(level + 1, 5); });
                     }
                     else {
                         overlay.html("Great job! You finished the highest level of " + (level + 1) + "<p><img src=\"cool.png\" width=\"150\"/>");
                         overlay.style({"display": "block", "color": "yellow"})
-                            .on("click", function () { game(level, 5); });
-                        //setTimeout(function () { game(level, 5); }, 3000);	
+                            .on("mousedown", function () { game(level, 5); });
                     }
                 }
             }
