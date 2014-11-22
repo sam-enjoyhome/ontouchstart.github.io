@@ -164,7 +164,6 @@ window.onload = function () {
                             "background": "#CCCCCC",
                             "box-shadow": "2px 2px 2px #888888"
                             });
-
                 function check() {
                         var _this = this;
                         if(currentQuestion) {
@@ -182,8 +181,13 @@ window.onload = function () {
                             game(level, 5);
                         }
                 }
-		button.on("mousedown", check);
-		button.on("touchstart", check);
+		var touchable = 'ontouchstart' in document.documentElement;
+		if(touchable) {
+			button.on("touchstart", check);
+		}
+		else {
+			button.on("mousedown", check);
+		}
             }
         }
     }
