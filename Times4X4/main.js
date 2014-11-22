@@ -164,9 +164,8 @@ window.onload = function () {
                             "background": "#CCCCCC",
                             "box-shadow": "2px 2px 2px #888888"
                             });
-                function check(e) {
-			e.preventDefault();
-                        var _this = e.target;
+                function check() {
+                        var _this = this;
                         if(currentQuestion) {
                             if(_this.innerHTML == currentQuestion[2]) {
                                 _this.style.display = "none";
