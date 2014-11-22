@@ -172,7 +172,7 @@ window.onload = function () {
                         if(currentQuestion) {
                             if(_this.innerHTML == currentQuestion[2]) {
                                 _this.style.display = "none";
-                                reset();
+                                setTimeout(reset, 1000);
                             }
                             else {
                                 this.style.color = "#FFFFFF";
