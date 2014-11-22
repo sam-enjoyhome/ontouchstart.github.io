@@ -182,8 +182,8 @@ window.onload = function () {
                             game(level, 5);
                         }
                 }
-		button.on("touchstart", check);
-		//button.on("mousedown", check);
+		//button.on("touchstart", check);
+		button.on("mousedown", check);
             }
         }
     }
